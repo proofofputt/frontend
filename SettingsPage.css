@@ -1,0 +1,163 @@
+.settings-page {
+  max-width: 1200px; /* Allow more width for side-by-side cards */
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.settings-section {
+  background-color: var(--surface-color);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+}
+.settings-section.full-width-section {
+  grid-column: 1 / -1;
+}
+
+
+.settings-section h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.settings-page .form-group {
+  margin-bottom: 1rem;
+}
+
+.settings-page .form-group label {
+  font-weight: bold;
+  color: var(--text-color-secondary);
+}
+
+.settings-section .form-hint {
+  font-size: 0.85rem;
+  color: var(--text-color-secondary);
+  opacity: 0.8;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.settings-page .form-group input[disabled] {
+  background-color: var(--masters-green-dark);
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.inline-edit {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.inline-edit input {
+  flex-grow: 1;
+}
+
+.inline-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background-color: var(--masters-green-dark);
+  border-radius: 4px;
+}
+
+.btn-small {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.9rem;
+  text-transform: none;
+}
+
+/* Subscription Section */
+.subscription-status p, .upgrade-section p {
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.subscription-status .status-badge, .upgrade-section .status-badge {
+  font-size: 1rem;
+  padding: 0.35em 0.8em;
+}
+
+.status-badge.status-active {
+  color: #fff;
+  background-color: #28a745;
+}
+
+.status-badge.status-free {
+  color: #000;
+  background-color: #ffc107;
+}
+
+.coupon-section {
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1.5rem 0;
+  margin: 1.5rem 0;
+}
+
+.upgrade-section {
+  text-align: center;
+}
+
+.coupon-section h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.upgrade-action .btn {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.upgrade-action .btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* --- Grid Layout for Settings --- */
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* --- Upgrade Section Styles --- */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.feature-card {
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.feature-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+

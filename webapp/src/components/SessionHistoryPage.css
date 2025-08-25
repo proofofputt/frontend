@@ -1,0 +1,19 @@
+.session-history-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* Let the container grow to fill available vertical space */
+  flex-grow: 1;
+}
+
+.session-history-page .session-list-container.full-height {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Important for the wrapper to control scroll */
+}
+
+.session-history-page .session-table-wrapper {
+  flex-grow: 1; /* This makes the wrapper take up all available space */
+  max-height: none; /* Override the fixed height from App.css to allow full page scroll */
+}
