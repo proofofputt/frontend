@@ -44,9 +44,11 @@ const DetailCategory = ({ title, overview, detailed }) => {
 const SessionRow = ({ session, playerTimezone, isLocked, isExpanded, onToggleExpand }) => {
   const formatDate = (dateString, timezone) => {
     if (!dateString) return 'N/A';
-    // Ensure the date string is parsed as UTC
-    const date = new Date(dateString + 'Z'); // Append 'Z' to ensure UTC parsing
-    // Use Intl.DateTimeFormat for timezone conversion and formatting
+    const date = new Date(dateString); // Parse ISO 8601 string directly
+    if (isNaN(date.getTime())) {
+        console.error("Invalid date value for formatting:", dateString);
+        return 'N/A'; // Or handle as per UI needs
+    }
     const options = {
       year: 'numeric',
       month: 'short',
