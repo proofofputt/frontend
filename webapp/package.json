@@ -1,7 +1,6 @@
 {
   "name": "webapp",
   "version": "1.0.0",
-  "main": "vite.config.js",
   "scripts": {
     "dev": "vite --port ${PORT:-5173}",
     "build": "vite build",
